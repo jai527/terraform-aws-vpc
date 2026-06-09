@@ -6,3 +6,11 @@ resource "aws_vpc" "main" {
   tags = local.common_tags
 
 }
+
+resource "aws_internet_gateway" "main" {
+  vpc_id = aws_vpc.main.id                     # vpc accostaions
+
+  tags = {
+    Name = "main"
+  }
+}

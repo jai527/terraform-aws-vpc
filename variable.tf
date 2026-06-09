@@ -19,3 +19,8 @@ variable "vpc_tags" {
     default = {}
 
 }
+
+variable "igc_tags" {
+    type = map
+    default = {}
+}

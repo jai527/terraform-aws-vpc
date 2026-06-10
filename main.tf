@@ -12,3 +12,18 @@ resource "aws_internet_gateway" "main" {
 
   tags = local.igw_final_tags
 }
+
+resource "aws_subnet" "public" {
+    count    = length(var.public_cidr)
+    vpc_id     = aws_vpc.main.id
+    cidr_block = var.public_cidr[count.index]
+
+  
+tags = merge(
+    local.common_tags,
+    {
+      Name = "${var.project}-${var.environment}-subnet-${count.index + 1}"
+    }
+  )
+
+}

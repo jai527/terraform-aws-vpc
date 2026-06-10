@@ -18,5 +18,6 @@ locals {
     },
     var.igc_tags
     )
-
+ az_info = slice(data.aws_availability_zones.available.names, 0, 2)
+ 
 }

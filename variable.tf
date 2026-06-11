@@ -41,7 +41,7 @@ variable "private_cidr" {
     default = ["10.0.11.0/24", "10.0.12.0/24"]
   
 }
-variable "private_subent_tags" {
+variable "private_subnet_tags" {
     type = map 
     default = {}
   
@@ -52,7 +52,7 @@ variable "database_cidr" {
     default = ["10.0.22.0/24", "10.0.23.0/24"]
   
 }
-variable "database_subent_tags" {
+variable "database_subnet_tags" {
     type = map 
     default = {}
   

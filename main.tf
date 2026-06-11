@@ -44,7 +44,7 @@ tags = merge(
 
         },
 
-        var.private_subnet.tags
+        var.private_subnet_tags
     )
    
  }
@@ -63,7 +63,7 @@ tags = merge(
 
         },
 
-        var.database_subent_tags
+        var.database_subnet_tags
     )
    
  }

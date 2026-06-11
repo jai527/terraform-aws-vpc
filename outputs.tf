@@ -1,4 +1,4 @@
 output "az_info" {
-    value = data.aws_availability_zone.available
+    value = data.aws_availability_zones.available
   
 }
